@@ -1,5 +1,4 @@
 /*Normalisation des styles des navigateurs et retrait des soulignements des liens*/
-
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&family=Roboto&display=swap");
 *,
 *::before,
@@ -12,18 +11,11 @@
 body {
   font-size: 16px;
   max-width: 1440px;
-  max-height: 1024px;
   margin: 0 auto;
-  padding: 3rem 5rem;
+  padding: 3rem 2rem;
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 1.5rem 0;
-    margin-bottom: 1.5rem;
-  }
-}
 a {
   text-decoration: none;
 }
@@ -37,32 +29,83 @@ main {
 }
 
 header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .logo_site {
-    width: 51px;
-    height: 46px;
-  }
-  
-  .name_site {
-    font-family: "DM Sans";
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #d04f4f;
-  }
-  
-  .main_search_filter {
-    width: 100%;
-    height: 4.3rem;
-    border-radius: 5px;
-    background-color: #e7e7e7;
-    border: none;
-    font-family: "Lato";
-    font-size: 1.125rem;
-    font-weight: 400;
-    padding-left: 1.375rem;
-  }
-  
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo_site {
+  width: 51px;
+  height: 46px;
+}
+
+.name_site {
+  font-family: "DM Sans";
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #d04f4f;
+}
+
+.main_search_filter {
+  width: 100%;
+  height: 4.3rem;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  border: none;
+  font-family: "Lato";
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-left: 1.375rem;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.main_search {
+  position: relative;
+}
+
+.fa-search {
+  position: absolute;
+  font-size: 2rem;
+  top: 20%;
+  right: 1%;
+}
+
+.filter_container {
+  display: flex;
+  border: none;
+}
+
+.filter_secondary {
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+.filter_secondary input {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  width: 10.625rem;
+  height: 4.3125rem;
+}
+
+.filter_ingredients {
+  background-color: #3282f7;
+}
+.filter_ingredients input {
+  background-color: #3282f7;
+}
+
+.filter_set {
+  background-color: #68d9a4;
+}
+.filter_set input {
+  background-color: #68d9a4;
+}
+
+.filter_utensil {
+  background-color: #ed6454;
+}
+.filter_utensil input {
+  background-color: #ed6454;
+}
+
 /*# sourceMappingURL=style.css.map */
