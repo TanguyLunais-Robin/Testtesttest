@@ -1,101 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/8730c06133.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="./images/logo_web.png"
-      type="image/x-icon"
-    />
-    <title>Les petits plats</title>
-  </head>
-  <body>
-    <header>
-      <img
-        class="logo_site"
-        src="./images/logo.svg"
-        alt="Logo du site les petits plats"
-      />
-      <h1 class="name_site">Les petits plats</h1>
-    </header>
-
-    <main>
-      <!-- zone de saisie de recherche -->
-      <section class="main_search_container">
-        <div class="main_search">
-          <input
-            class="main_search_filter"
-            type="text"
-            placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
-            aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette"
-          />
-          <i class="fas fa-search"></i>
-        </div>
-      </section>
-      <section class="filters">
-        <div class="tags_selection">
-          <!-- on injecte au clic les ingrédients, appareils ou ustensiles -->
-        </div>
-
-        <!-- zone des 3 dropdown ingredients, appareil, ustensiles-->
-        <div class="filter_container">
-          <!-- filtre des ingredients-->
-          <div class="filter_ingredients filter_secondary">
-            <h2 class="title_ingredients">Ingredients</h2>
-            <input
-              class="filter_ingredients_search hidden"
-              type="text"
-              placeholder="Rechercher un ingrédient"
-            />
-            <span class="filter_arrow arrow_ingredient">
-              <img src="./images/arrow.svg" alt="fleche_dropdown" />
-            </span>
-
-            <ul class="filter_ingredients_list lists hidden"></ul>
-          </div>
-
-          <!-- filtre des appareils-->
-          <div class="filter_appliance filter_secondary">
-            <h2 class="title_appliance">Appareils</h2>
-            <input
-              class="filter_appliance_search hidden"
-              type="text"
-              placeholder="Rechercher un appareil"
-            />
-            <span class="filter_arrow arrow_appliance">
-              <img src="./images/arrow.svg" alt="fleche_dropdown" />
-            </span>
-            <ul class="filter_appliance_list lists hidden"></ul>
-          </div>
-
-          <!-- filtre des ustensiles-->
-          <div class="filter_utensil filter_secondary">
-            <h2 class="title_utensil">Ustensiles</h2>
-            <input
-              class="filter_utensil_search hidden"
-              type="text"
-              placeholder="Rechercher un ustensile"
-            />
-            <span class="filter_arrow arrow_utensil">
-              <img src="./images/arrow.svg" alt="fleche_dropdown" />
-            </span>
-            <ul class="filter_utensil_list lists hidden"></ul>
-          </div>
-        </div>
-      </section>
-
-      <!--Partie des recettes de cuisine-->
-      <section class="cards">
-        <!--Injection des recettes via recipes.js-->
-      </section>
-    </main>
-    <script type="module" src="./js/index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les petis plats</title>
+		<link rel="icon" type="image/png" href="./images/logo_plats.png" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<!-- En tete-->
+		<header>
+			<img
+				src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1619049061/logo-les-petits-plats_jagbwd.png"
+				alt="Les petits plats"
+			/>
+		</header>
+		<!-- Barre de recherche -->
+		<form id="searchBar">
+			<label for="searchBarInput"></label>
+			<input
+				type="search"
+				id="searchBarInput"
+				placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette"
+				aria-label="Search through site content"
+			/>
+			<i class="fas fa-search"></i>
+		</form>
+		<!-- Filtres -->
+		<div id="filter">
+			<div id="ingredients">
+				<button>
+					Ingrédients <i class="fas fa-chevron-down" id="openIngredientsFilter"></i>
+				</button>
+			</div>
+			<div id="appareil">
+				<button>
+					Appareil <i class="fas fa-chevron-down" id="openAppareilFilter"></i>
+				</button>
+			</div>
+			<div id="ustensiles">
+				<button>
+					Ustensiles <i class="fas fa-chevron-down" id="openUstensilesFilter"></i>
+				</button>
+			</div>
+		</div>
+		<!-- Recettes-->
+		<main id="mainContent"></main>
+		<script src="./js/API/recipesData.js"></script>
+		<script type="module" src="./js/main.js"></script>
+	</body>
 </html>
